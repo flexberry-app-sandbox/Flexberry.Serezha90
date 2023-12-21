@@ -1,0 +1,85 @@
+<h3 class="ui header">{{t "forms.i-i-s-serezha90-оплата-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-serezha90-оплата-e.оплачено-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.оплачено
+      class=(if (v-get validationModel "оплачено" "isInvalid") "error")
+      data-test-i-i-s-serezha90-оплата-e-оплачено=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оплачено" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-serezha90-оплата-e-типОплаты="true">
+    <label>{{t "forms.i-i-s-serezha90-оплата-e.типОплаты-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-serezha90-тип-оплаты")
+      value=model.типОплаты
+      class=(if (v-get validationModel "типОплаты" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "типОплаты" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-serezha90-оплата-e.заказы-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.заказы
+      displayAttributeName="время"
+      autocomplete=true
+      relationName="заказы"
+      projection="ЗаказыL"
+      title=(t "forms.i-i-s-serezha90-оплата-e.заказы-caption")
+      readonly=readonly
+      componentName="заказыLookup"
+      class=(if (v-get validationModel "заказы" "isInvalid") "error")
+      data-test-i-i-s-serezha90-оплата-e-заказы=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заказы" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.заказы.клиенты.фамилия
+      class=(if (v-get validationModel.заказы.клиенты "фамилия" "isInvalid") "error")
+      label=(t "forms.i-i-s-serezha90-оплата-e.заказы.клиенты.фамилия-caption")
+      data-test-i-i-s-serezha90-оплата-e-заказы-клиенты-фамилия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.заказы.клиенты "фамилия" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.заказы.сотрудник.фамилия
+      class=(if (v-get validationModel.заказы.сотрудник "фамилия" "isInvalid") "error")
+      label=(t "forms.i-i-s-serezha90-оплата-e.заказы.сотрудник.фамилия-caption")
+      data-test-i-i-s-serezha90-оплата-e-заказы-сотрудник-фамилия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.заказы.сотрудник "фамилия" "message")}}
+  </div>
+</form>

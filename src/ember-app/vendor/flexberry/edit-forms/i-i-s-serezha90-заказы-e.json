@@ -1,0 +1,63 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Номера",
+      "projection": "НомераL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудник",
+      "projection": "СотрудникL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиенты",
+      "projection": "КлиентыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Заказы",
+      "projection": "ЗаказыL",
+      "detailModelName": null
+    },
+    {
+      "master": "блюда",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ЗаказБлюд.Блюда",
+      "projection": "БлюдаL",
+      "detailModelName": "i-i-s-serezha90-заказ-блюд"
+    },
+    {
+      "master": "напитки",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "ЗаказНапитков.Напитки",
+      "projection": "НапиткиL",
+      "detailModelName": "i-i-s-serezha90-заказ-напитков"
+    }
+  ],
+  "external": false,
+  "caption": "Заказы",
+  "name": "IISSerezha90ЗаказыE",
+  "className": "ЗаказыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-serezha90-заказы",
+      "modelProjection": "ЗаказыE"
+    }
+  ]
+}

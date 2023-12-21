@@ -1,0 +1,1 @@
+docker-compose -p serezha90-java down

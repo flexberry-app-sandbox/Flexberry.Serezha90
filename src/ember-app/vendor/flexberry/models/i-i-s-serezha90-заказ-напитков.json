@@ -1,0 +1,83 @@
+﻿{
+  "name": "IISSerezha90ЗаказНапитков",
+  "modelName": "i-i-s-serezha90-заказ-напитков",
+  "className": "ЗаказНапитков",
+  "nameSpace": "IIS.Serezha90",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "комментарий",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "напитки",
+      "relatedTo": "i-i-s-serezha90-напитки",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказы",
+      "relatedTo": "i-i-s-serezha90-заказы",
+      "inverse": "заказНапитков"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗаказНапитковE",
+      "modelName": "i-i-s-serezha90-заказ-напитков",
+      "attrs": [
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Напитки",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 2
+            },
+            {
+              "name": "стоимость",
+              "caption": "",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Напитки",
+          "name": "напитки",
+          "relatedTo": "i-i-s-serezha90-напитки",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

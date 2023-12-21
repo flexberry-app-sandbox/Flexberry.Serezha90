@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-serezha90-напитки-e",
+  "editForm": "i-i-s-serezha90-напитки-e",
+  "external": false,
+  "caption": "Напитки",
+  "name": "IISSerezha90НапиткиL",
+  "className": "НапиткиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-serezha90-напитки",
+      "modelProjection": "НапиткиL"
+    }
+  ]
+}

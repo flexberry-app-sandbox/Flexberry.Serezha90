@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-serezha90-оплата-e",
+  "editForm": "i-i-s-serezha90-оплата-e",
+  "external": false,
+  "caption": "Оплата",
+  "name": "IISSerezha90ОплатаL",
+  "className": "ОплатаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-serezha90-оплата",
+      "modelProjection": "ОплатаL"
+    }
+  ]
+}

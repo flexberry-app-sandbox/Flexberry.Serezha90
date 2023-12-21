@@ -1,0 +1,125 @@
+﻿{
+  "applicationCaption": "Serezha90",
+  "applicationTitle": "Serezha90",
+  "items": [
+    {
+      "link": null,
+      "menuName": "меню-ресторана",
+      "caption": "Меню ресторана",
+      "title": "Меню ресторана",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-напитки-l",
+          "menuName": null,
+          "caption": "Напитки",
+          "title": "Напитки",
+          "children": null
+        },
+        {
+          "link": "i-i-s-serezha90-блюда-l",
+          "menuName": null,
+          "caption": "Блюда",
+          "title": "Блюда",
+          "children": null
+        },
+        {
+          "link": "i-i-s-serezha90-продукты-l",
+          "menuName": null,
+          "caption": "Продукты",
+          "title": "Продукты",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "сотрудники",
+      "caption": "Сотрудники",
+      "title": "Сотрудники",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-сотрудник-l",
+          "menuName": null,
+          "caption": "Сотрудник",
+          "title": "Сотрудник",
+          "children": null
+        },
+        {
+          "link": "i-i-s-serezha90-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "Должности",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "оплата",
+      "caption": "Оплата",
+      "title": "Оплата",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-оплата-l",
+          "menuName": null,
+          "caption": "Оплата",
+          "title": "Оплата",
+          "children": null
+        },
+        {
+          "link": "i-i-s-serezha90-регистр-l",
+          "menuName": null,
+          "caption": "Регистр",
+          "title": "Регистр",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "заказы",
+      "caption": "Заказы",
+      "title": "Заказы",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-заказы-l",
+          "menuName": null,
+          "caption": "Заказы",
+          "title": "Заказы",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "клиенты",
+      "caption": "Клиенты",
+      "title": "Клиенты",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-клиенты-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "Клиенты",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "номера",
+      "caption": "Номера",
+      "title": "Номера",
+      "children": [
+        {
+          "link": "i-i-s-serezha90-номера-l",
+          "menuName": null,
+          "caption": "Номера",
+          "title": "Номера",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

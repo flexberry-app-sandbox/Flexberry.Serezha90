@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-serezha90-номера-e",
+  "editForm": "i-i-s-serezha90-номера-e",
+  "external": false,
+  "caption": "Номера",
+  "name": "IISSerezha90НомераL",
+  "className": "НомераL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-serezha90-номера",
+      "modelProjection": "НомераL"
+    }
+  ]
+}

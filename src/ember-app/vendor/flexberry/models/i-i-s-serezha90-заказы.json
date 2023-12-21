@@ -1,0 +1,431 @@
+﻿{
+  "name": "IISSerezha90Заказы",
+  "modelName": "i-i-s-serezha90-заказы",
+  "className": "Заказы",
+  "nameSpace": "IIS.Serezha90",
+  "parentModelName": "i-i-s-serezha90-регистр",
+  "parentClassName": "Регистр",
+  "attrs": [
+    {
+      "name": "время",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодЗаказа",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "колПерсон",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "комментарий",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типВручения",
+      "type": "i-i-s-serezha90-тип-получения",
+      "flexberryType": "ТипПолучения",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типОплаты",
+      "type": "i-i-s-serezha90-тип-оплаты",
+      "flexberryType": "ТипОплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиенты",
+      "relatedTo": "i-i-s-serezha90-клиенты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "номера",
+      "relatedTo": "i-i-s-serezha90-номера",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-serezha90-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "заказБлюд",
+      "relatedTo": "i-i-s-serezha90-заказ-блюд",
+      "inverse": "заказы"
+    },
+    {
+      "name": "заказНапитков",
+      "relatedTo": "i-i-s-serezha90-заказ-напитков",
+      "inverse": "заказы"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказыE",
+      "modelName": "i-i-s-serezha90-заказы",
+      "attrs": [
+        {
+          "name": "кодЗаказа",
+          "caption": "Код заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "время",
+          "caption": "Время",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "типВручения",
+          "caption": "Тип вручения",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "колПерсон",
+          "caption": "Кол персон",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "кодЗазака",
+          "caption": "Код зазака",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерКомнаты",
+          "lookupValueField": "номерКомнаты",
+          "relationName": "Номера",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерКомнаты",
+              "caption": "Номер комнаты",
+              "hidden": true,
+              "index": 10
+            }
+          ],
+          "index": 9,
+          "type": "standard",
+          "caption": "Номера",
+          "name": "номера",
+          "relatedTo": "i-i-s-serezha90-номера",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 12
+            }
+          ],
+          "index": 11,
+          "type": "standard",
+          "caption": "Сотрудник",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-serezha90-сотрудник",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Фамилия",
+          "lookupValueField": "фамилия",
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": true,
+              "index": 14
+            }
+          ],
+          "index": 13,
+          "type": "standard",
+          "caption": "Клиенты",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-serezha90-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Время",
+          "lookupValueField": "время",
+          "relationName": "Заказы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "время",
+              "caption": "Время",
+              "hidden": true,
+              "index": 16
+            }
+          ],
+          "index": 15,
+          "type": "standard",
+          "caption": "Заказы",
+          "name": "заказы",
+          "relatedTo": "i-i-s-serezha90-заказы",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ЗаказБлюдE",
+          "caption": "Заказ блюд",
+          "name": "заказБлюд",
+          "relatedTo": "i-i-s-serezha90-заказ-блюд",
+          "inverse": null
+        },
+        {
+          "projectionName": "ЗаказНапитковE",
+          "caption": "Заказ напитков",
+          "name": "заказНапитков",
+          "relatedTo": "i-i-s-serezha90-заказ-напитков",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказыL",
+      "modelName": "i-i-s-serezha90-заказы",
+      "attrs": [
+        {
+          "name": "кодЗаказа",
+          "caption": "Код заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "время",
+          "caption": "Время",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "типВручения",
+          "caption": "Тип вручения",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "колПерсон",
+          "caption": "Кол персон",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "комментарий",
+          "caption": "Комментарий",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "кодЗазака",
+          "caption": "Код зазака",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Номера",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерКомнаты",
+              "caption": "Номер комнаты",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер комнаты",
+          "name": "номера",
+          "relatedTo": "i-i-s-serezha90-номера",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудник",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 10
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "сотрудник",
+          "relatedTo": "i-i-s-serezha90-сотрудник",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиенты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фамилия",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 11
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "клиенты",
+          "relatedTo": "i-i-s-serezha90-клиенты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Заказы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "время",
+              "caption": "Время",
+              "hidden": false,
+              "index": 12
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Время",
+          "name": "заказы",
+          "relatedTo": "i-i-s-serezha90-заказы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

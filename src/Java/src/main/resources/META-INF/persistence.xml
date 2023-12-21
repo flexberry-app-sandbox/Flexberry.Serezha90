@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>Serezha90.model.Klienty</class>
+        <class>Serezha90.model.Dolzhnosti</class>
+        <class>Serezha90.model.ZakazBlyud</class>
+        <class>Serezha90.model.Oplata</class>
+        <class>Serezha90.model.Sotrudnik</class>
+        <class>Serezha90.model.SostavBlyuda</class>
+        <class>Serezha90.model.ZakazNapitkov</class>
+        <class>Serezha90.model.Registr</class>
+        <class>Serezha90.model.Nomera</class>
+        <class>Serezha90.model.SostavNapitkov</class>
+        <class>Serezha90.model.Blyuda</class>
+        <class>Serezha90.model.Produkty</class>
+        <class>Serezha90.model.Napitki</class>
+        <class>Serezha90.model.Zakazy</class>
+        <class>Serezha90.model.FlexberryAdvLimit</class>
+        <class>Serezha90.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>Serezha90.model.NewPlatformFlexberryServicesLock</class>
+        <class>Serezha90.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>

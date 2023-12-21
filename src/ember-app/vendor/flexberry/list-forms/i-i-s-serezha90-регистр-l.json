@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-serezha90-регистр-e",
+  "editForm": "i-i-s-serezha90-регистр-e",
+  "external": false,
+  "caption": "Регистр",
+  "name": "IISSerezha90РегистрL",
+  "className": "РегистрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-serezha90-регистр",
+      "modelProjection": "РегистрL"
+    }
+  ]
+}
